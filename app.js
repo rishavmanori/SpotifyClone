@@ -90,7 +90,7 @@ async function displayArtists() {
     const e = array[i];
     if (e.getElementsByTagName("a")[0].href.includes("/Songs/")) {
       let folder = e.firstChild.title;
-      let a = await fetch(`http://127.0.0.1:5500/Songs/${folder}/info.json`);
+      let a = await fetch(`Songs/${folder}/info.json`);
       let response = await a.json();
       cardContainer.innerHTML += `<div data-folder="${response.title}" class="card rounded">
       <div class="play-btn">
