@@ -1,6 +1,6 @@
 @font-face {
   font-family: "CircularSp";
-  src: url("Fonts/CircularSpotifyText-Medium.otf");
+  src: url("public/Fonts/CircularSpotifyText-Medium.otf");
 }
 * {
   margin: 0;
