@@ -1,10 +1,15 @@
 let currentSong = new Audio();
 var currentMusic = null;
 let songs;
-let currFolder="./";
+let currFolder=`${window.location.href}Songs`;
+console.log("Current Folder :"+currFolder);
+// console.log(window.location.pathname);
+console.log(window.location.href);
 async function getSongs(folder) {
-  console.log("Current Folder :"+folder);
-  let a = await fetch(currFolder);
+  currFolder = folder;
+  // console.log(folder);
+  let a = await fetch(`${currFolder}`);
+  // console.log(currFolder);
   let response = await a.text();
   let div = document.createElement("div");
   div.innerHTML = response;
@@ -78,7 +83,7 @@ const playMusic = (track) => {
 };
 
 async function displayArtists() {
-  let a = await fetch(`Songs`);
+  let a = await fetch(currFolder);
   let response = await a.text();
   // console.log(response);
   let div = document.createElement("div");
@@ -110,7 +115,7 @@ async function displayArtists() {
         `Songs/${item.target.parentElement.dataset.folder}`
 
       );
-      //console.log(item.target.parentElement.dataset.folder);
+      console.log(item.target.parentElement.dataset.folder);
     });
   });
 }
