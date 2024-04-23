@@ -1,12 +1,10 @@
 let currentSong = new Audio();
 var currentMusic = null;
 let songs;
-let currFolder;
+let currFolder="./";
 async function getSongs(folder) {
-  currFolder = folder;
-  console.log(folder);
-  let a = await fetch(`${currFolder}`);
-  console.log(currFolder);
+  console.log("Current Folder :"+folder);
+  let a = await fetch(currFolder);
   let response = await a.text();
   let div = document.createElement("div");
   div.innerHTML = response;
@@ -112,7 +110,7 @@ async function displayArtists() {
         `Songs/${item.target.parentElement.dataset.folder}`
 
       );
-      console.log(item.target.parentElement.dataset.folder);
+      //console.log(item.target.parentElement.dataset.folder);
     });
   });
 }
