@@ -4,6 +4,7 @@ let songs;
 let currFolder;
 async function getSongs(folder) {
   currFolder = folder;
+  console.log(folder);
   let a = await fetch(`${currFolder}`);
   console.log(currFolder);
   let response = await a.text();
@@ -79,8 +80,9 @@ const playMusic = (track) => {
 };
 
 async function displayArtists() {
-  let a = await fetch(`Songs/`);
+  let a = await fetch(`Songs`);
   let response = await a.text();
+  // console.log(response);
   let div = document.createElement("div");
   div.innerHTML = response;
   let li = div.getElementsByTagName("li");
@@ -108,8 +110,9 @@ async function displayArtists() {
     e.addEventListener("click", async (item) => {
       songs = await getSongs(
         `Songs/${item.target.parentElement.dataset.folder}`
+
       );
-      // console.log(item.target.parentElement.dataset.folder);
+      console.log(item.target.parentElement.dataset.folder);
     });
   });
 }
