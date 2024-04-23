@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify - Web Player: Music for everyone</title>
+    <link rel="icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="utility.css" />
+  </head>
+  <body>
+    <div class="container flex bg-black">
+      <div class="left">
+        <div class="home bg-grey rounded m1">
+          <div class="logo">
+            <img class="invert" src="images/logo.svg" />
+          </div>
+          <ul>
+            <li>
+              <div class="element flex">
+                <img class="invert" src="images/home.svg" alt="home" />
+                <div>Home</div>
+              </div>
+            </li>
+            <li>
+              <div class="element flex">
+                <img class="invert" src="images/search.svg" alt="home" />
+                <div>Search</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="library bg-grey rounded m1">
+          <div class="heading flex align-items">
+            <img class="invert" src="images/library.svg" alt="" />
+            <p>Your Library</p>
+          </div>
+          <div class="songList">
+            <ul></ul>
+          </div>
+          <!-- <div class="footer">
+            <div class="list">
+              <a href="https://www.spotify.com/in-en/legal/">
+                <span>Legal</span>
+              </a>
+              <a href="https://www.spotify.com/in-en/safetyandprivacy/">
+                <span>Safety & Privacy Center</span>
+              </a>
+              <a href="https://www.spotify.com/in-en/legal/privacy-policy/">
+                <span>Privacy Policy</span>
+              </a>
+              <a href="https://www.spotify.com/in-en/legal/cookies-policy/">
+                <span>Cookies</span>
+              </a>
+              <a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3">
+                <span>About Ads</span>
+              </a>
+              <a href="https://www.spotify.com/in-en/accessibility/">
+                <span>Accessibility</span>
+              </a>
+              <a
+                draggable="false"
+                href="https://www.spotify.com/legal/cookies-policy/"
+                target="_blank"
+                rel="noopener"
+              >
+                <span>Cookies</span>
+              </a>
+            </div>
+            <div class="button">
+              <button>
+                <span>English</span>
+              </button>
+            </div>
+          </div> -->
+        </div>
+      </div>
+      <div class="right bg-grey rounded m1">
+        <div class="header">
+          <div class="nav">
+            <button class="left-btn">
+              <img class="invert" src="images/left.svg" alt="" />
+            </button>
+            <div class="right-items">
+              <button class="signup-btn">Sign up</button>
+              <button class="login-btn">Log in</button>
+            </div>
+          </div>
+          <div class="playlists">
+            <h1>Artists</h1>
+            <div class="card-container"></div>
+          </div>
+          <div class="playbar">
+            <div class="song-info" style="visibility: hidden">
+              <img src="images/Circles.jpeg" alt="cover-art" />
+              <div class="info">
+                <div class="name">Circles</div>
+                <div class="artist">Post Malone</div>
+              </div>
+            </div>
+            <div class="bar2">
+              <div class="play-buttons">
+                <button id="prev"><img src="images/prev.svg" alt="" /></button>
+                <button id="play" class="play">
+                  <img src="images/play.svg" alt="" />
+                </button>
+                <button id="next"><img src="images/next.svg" alt="" /></button>
+              </div>
+              <div class="bar">
+                <div class="song-time">-:--</div>
+                <div class="seekbar">
+                  <div class="circle"></div>
+                </div>
+                <div class="song-duration">-:--</div>
+              </div>
+            </div>
+            <label class="slider">
+              <input type="range" class="level" />
+              <img src="images/volume.svg" class="invert" />
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
